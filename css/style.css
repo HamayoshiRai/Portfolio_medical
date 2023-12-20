@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+body{
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
 .pcHeader {
   box-shadow: 17px -6px 8px 1px #888;
   position: fixed;
@@ -76,7 +84,32 @@ nav ul {
   text-align: center;
 }
 
-#slick-slide00 {
-  background: url(../img/main0.jpg);
+/* スライドショー */
+
+.slide {
+  overflow: hidden;
   width: 100%;
+  height: auto;
+  margin: auto;
+  background: #fff;
+}
+.slide img {
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  left: 100%;
+  animation: slide-anime 30s ease infinite;
+}
+.slide img:nth-of-type(1) {animation-delay: 0s;}
+.slide img:nth-of-type(2) {animation-delay: 10s;}
+.slide img:nth-of-type(3) {animation-delay: 20s;}
+
+
+@keyframes slide-anime{
+  0% {left: 100%;}
+  10% {left: 5%;}
+  18% {left: 0;}
+  35% {left: -100%;}
+  100% {left: -100%;}
 }
