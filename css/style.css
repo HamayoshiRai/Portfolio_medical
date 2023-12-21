@@ -153,3 +153,45 @@ nav ul {
     z-index: 0;
   }
 }
+
+/* スライドショーボタン */
+.slide-dots {
+  text-align: center;
+  display: flex;
+  position: absolute;
+  right: 40px;
+  bottom: 62px;
+  z-index: 999;
+}
+
+.slide-dots .active {
+  background: #143d70;
+  height: 7px;
+}
+
+.slide-dots li {
+  cursor: pointer;
+  width: 90px;
+  margin: 0 15px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  height: 7px;
+}
+
+.slide-dots li button {
+  cursor: pointer;
+  position: relative;
+  text-indent: -9999px 
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
