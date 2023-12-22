@@ -87,41 +87,14 @@ nav ul {
 
 /* スライドショー */
 
-.slide {
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  margin: auto;
-  background: #fff;
-}
-.slide img {
-  display: block;
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  left: 100%;
-  animation: slide-anime 30s ease infinite;
-}
-.slide img:nth-of-type(1) {animation-delay: 0s;}
-.slide img:nth-of-type(2) {animation-delay: 10s;}
-.slide img:nth-of-type(3) {animation-delay: 20s;}
-
-
-@keyframes slide-anime{
-  0% {left: 100%;}
-  10% {left: 5%;}
-  18% {left: 0;}
-  35% {left: -100%;}
-  100% {left: -100%;}
-}
-
 .slide{
   width: 100%;
   height: 46vw;
   overflow: hidden;
   position: relative;
 }
-.slide img{
+
+.slide img {
   position: absolute;
   top: 0;
   left: 0;
@@ -130,28 +103,14 @@ nav ul {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0; /* 最初はすべての画像を非表示に */
+  
   z-index: 10;
-  /* フェード */
-  opacity: 0;
-  animation-name: fade;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
 }
-@keyframes fade {
-  0%{
-    opacity: 0;
-  }
-  20%{
-    opacity: 1;
-  }
-  80%{
-    opacity: 0;
-    transform: scale(1.2);
-  }
-  100%{
-    opacity: 0;
-    z-index: 0;
-  }
+
+.slide_active {
+  opacity: 1; /* アクティブなスライドのみ表示 */
+  transition: opacity 1.5s ease; /* フェードのトランジションを設定 */
 }
 
 /* スライドショーボタン */
