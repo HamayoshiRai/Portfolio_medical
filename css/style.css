@@ -85,6 +85,28 @@ nav ul {
   z-index: 999;
 }
 
+.openingText h1 {
+  text-align: center;
+  line-height: 55px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: #e6982a 1px 1px 13px, #e6982a -1px 1px 13px, #e6982a 1px -1px 13px, #e6982a -1px -1px 13px;
+}
+
+.openingText p {
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: solid 3px #fff;
+  display: inline-block;
+  margin: auto;
+  text-shadow: #e6982a 1px 1px 13px, #e6982a -1px 1px 13px, #e6982a 1px -1px 13px, #e6982a -1px -1px 13px;
+}
+
 /* スライドショー */
 
 .slide{
@@ -124,7 +146,7 @@ nav ul {
 }
 
 .slide-dots .active {
-  background: #143d70;
+  background: #5d5d5d;
   height: 7px;
 }
 
@@ -153,4 +175,101 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.title_box {
+  background: linear-gradient(transparent 90%, #e6982a 3px);
+}
+
+h2 {
+  color: #e6982a;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: left;
+  position: relative;
+  padding: 0 30px 0;
+  max-width: 1200px;
+  margin: 100px auto 0;
+  letter-spacing: 0;
+}
+
+.ttl_ja {
+  font-size: 18px;
+  letter-spacing: .05em;
+  color: #000;
+  margin-top: 10px;
+  margin-left: 10px;
+  vertical-align: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.bk_br {
+  background-color: #e8edf3;
+}
+
+.box_main_inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 30px;
+}
+
+.news_contents {
+  padding: 20px 50px;
+  padding-bottom: 40px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.news_contents a {
+  display: block;
+  border-bottom: solid 1px;
+  padding: 20px 0px;
+  position: relative;
+  transition: .4s;
+}
+
+.news_contents span {
+  border-radius: 3px;
+  padding: 6px 20px;
+  margin: 0 10px;
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+  background-color: #f83c00;
+}
+
+.news_contents dd {
+  color: #333;
+  padding-top: 20px;
+  display: block;
+}
+
+/* view more */
+.btnBox {
+  text-align: center;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  display: block;
+}
+
+.btnBox a {
+  display: block;
+  border: solid 1px;
+  padding: 15px;
+  background: #fff;
+  position: relative;
+  transition: .5s;
+  font-weight: bold;
+  text-align: left;
+  width: 240px;
+  margin: auto;
+}
+
+.btnBox a::after {
+  content: url(../img/btn_arrow.jpg);
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  transition: .5s;
 }
