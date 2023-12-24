@@ -177,6 +177,7 @@ button {
   appearance: none;
 }
 
+/* section部分 */
 .title_box {
   background: linear-gradient(transparent 90%, #e6982a 3px);
 }
@@ -220,6 +221,7 @@ h2 {
   margin-bottom: 30px;
 }
 
+/* 最新情報 */
 .news_contents a {
   display: block;
   border-bottom: solid 1px;
@@ -273,3 +275,88 @@ h2 {
   top: 10px;
   transition: .5s;
 }
+
+/* 事業概要 */
+#topService {
+  margin-bottom: 0px;
+}
+
+.tabMenu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  position: relative;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.tabMenu li {
+  width: 33%;
+}
+
+.tabMenu li a {
+  display: block;
+  text-align: center;
+  padding: 35px 0;
+  margin: 0 1px;
+  background: #fff;
+  border: solid 1px #e6982a;
+  color: #e6982a;
+  text-decoration: none;
+}
+
+.tabMenu li a.active {
+  position: relative;
+  background: #e6982a;
+  color: #fff;
+}
+
+.tabMenu li a:not(.active) {
+  transition: 0.4s;
+}
+
+.content.active {
+  color: #333333;
+  padding: 0;
+  display: block;
+}
+
+.img_box p {
+  padding-top: 110px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.3em;
+}
+
+.img_box p span {
+  font-size: 120%;
+}
+
+.flex_st {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex_50_box {
+  width: 50%;
+}
+
+.box_sp30_l {
+  padding: 30px;
+}
+
+.logo_box {
+  margin-bottom: 30px;
+}
+
+img.logo_fg001 {
+  max-width: 300px;
+}
+
+p {
+  line-height: 2em;
+  font-size: 14px;
+}
+
