@@ -321,22 +321,19 @@ h2 {
   display: block;
 }
 
+.img_box {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+}
+
 .img_box p {
   padding-top: 110px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   line-height: 1.3em;
-}
-
-.img_box p span {
-  font-size: 120%;
-}
-
-.flex_st {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  text-shadow: #e6982a 1px 1px 13px, #e6982a -1px 1px 13px, #e6982a 1px -1px 13px, #e6982a -1px -1px 13px;
 }
 
 .flex_50_box {
@@ -360,3 +357,68 @@ p {
   font-size: 14px;
 }
 
+p.font_L {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bk_fg001 {
+  background-image: url(../img/bk_fg001.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.flex_st {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.txt_R {
+  text-align: right;
+  width: 50%;
+  background-color: #fff1e8;
+}
+
+.txt_L {
+  text-align: left;
+  width: 100%;
+}
+
+.posi_re {
+  position: relative;
+  padding: 30px 30px;
+}
+
+h3 {
+  color: #e6982a;
+  font-size: 25px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.flex_50_R {
+  width: 50%;
+  text-align: left;
+  background-color: #fdfae2;
+}
+
+.flex_50 {
+  max-width: 620px;
+  width: 100%;
+}
+
+.box_sp30 {
+  padding: 30px 30px;
+}
+
+ul.list li {
+  background-image: url(../img/maru.png);
+  background-position: left 0px top 3px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  line-height: 1.3em;
+}
