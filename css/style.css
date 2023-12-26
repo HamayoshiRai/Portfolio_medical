@@ -422,3 +422,23 @@ ul.list li {
   margin-bottom: 10px;
   line-height: 1.3em;
 }
+
+/* リハビリ */
+.bk_reha {
+  background-image: url(../img/bk_fg001.jpg);
+  background-position: center -15vw;
+  background-size: cover;
+}
+
+.box_main_inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 30px;
+}
+
+/* コンサル */
+.bk_con {
+  background-image: url(../img/bk_fg001.jpg);
+  background-position: center;
+  background-size: cover;
+}
