@@ -442,3 +442,23 @@ ul.list li {
   background-position: center;
   background-size: cover;
 }
+
+/* 経営理念 */
+.philosophyWrap {
+  background: rgb(255, 200, 124);
+  padding-bottom: 45px;
+}
+
+.philosophyWrap h3 {
+  color: #fff;
+  opacity: 1;
+  text-align: left;
+  margin: 0 auto 30px;
+  font-size: 30px;
+  max-width: 1200px;
+}
+
+.philosophyWrap p {
+  color: #fff;
+}
+
