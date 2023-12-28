@@ -462,3 +462,63 @@ ul.list li {
   color: #fff;
 }
 
+/* ボトム */
+.berBox {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  padding: 0 25px;
+}
+
+.berBox > div {
+  overflow: hidden;
+}
+
+.partnerBnr {
+  position: relative;
+  margin-right: 12px;
+}
+
+.partnerBnr p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  line-height: 1em;
+}
+
+.berBox span {
+  display: block;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.contactBnr p {
+  position: absolute;
+  right: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  line-height: 1em;
+  z-index: 999;
+}
+
+.berBox p {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.berBox img {
+  width: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  vertical-align: bottom;
+}
