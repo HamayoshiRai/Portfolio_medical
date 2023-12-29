@@ -105,12 +105,12 @@
   </div>
 
   <section id="topService">
-		<div class="title_box bottomFade1" data-sr-id="2" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 1.4s cubic-bezier(0.5, 0, 0, 1) 0.02s, transform 1.4s cubic-bezier(0.5, 0, 0, 1) 0.02s;">
+		<div class="title_box bottomFade1" data-sr-id="2">
 			<h2>SERVICE<span class="ttl_ja">事業概要</span></h2>
 		</div>
-		<div class=" bottomFade1 bk_br" data-sr-id="3" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 1.4s cubic-bezier(0.5, 0, 0, 1) 0.02s, transform 1.4s cubic-bezier(0.5, 0, 0, 1) 0.02s;">
+		<div class=" bottomFade1 bk_br" data-sr-id="3">
 			<div class="box_main_inner"> 
-				<ul class="tabMenu">
+				<ul class="tabMenu" id="tabMenu">
 					<li class="animatespeed1" data-sr-id="11"><a href="#" class="active" data-id="about">⾝体機能レコードシステムFG-001</a></li>
 					<li class="animatespeed2" data-sr-id="13"><a href="#" data-id="tb_service">リハビリテーション医療のデジタル化推進</a></li>
 					<li class="animatespeed3" data-sr-id="15"><a href="#" data-id="contact">コンサルティング</a></li>
@@ -120,7 +120,7 @@
 
 		<!--    fg001    -->
 		<div class=" bottomFade1 " data-sr-id="4">
-			<div class="content active" id="about">
+			<div class="content active hide" id="about">
 				<div class="img_box bk_fg001">
 					<p class="img_title">⾝体機能レコードシステム<br>
 					<span>FG-001</span></p>
@@ -173,7 +173,7 @@
 		</div>
 
 		<!--    リハビリ    -->
-		<div class="content" id="tb_service">
+		<div class="content hide" id="tb_service">
 			<div class="img_box bk_reha"><p class="img_title">リハビリテーション医療のデジタル化推進</p></div>
 			<div class="box_main_inner">
 				<div class="flex_st">
@@ -185,7 +185,13 @@
 					<div class="flex_50_box">
 						<div class="box_sp30_r">
 							<h3>リハビリテーション医療のデジタル化推進</h3>
-							<p>クラウドサービスを活用してリハビリテーション医療関連のナレッジを<span class="has-inline-color has-vivid-red-color">蓄積・解析</span>することで、既存業務のデジタル化とひとりひとりへの適切なサービス提供をサポートします。リハビリテーション医療の現場には、活用されないデータが山積しています。わざわざ時間をとって計測しなくても、データの蓄積や解析が自動化されたら、どんなに役立つだろうと思ったことはありませんか？私達は、そんな現場のニーズに応え、近未来のあるべき姿を追求します。</p>
+							<p>クラウドサービスを活用してリハビリテーション医療関連のナレッジを
+								<span class="has-inline-color has-vivid-red-color">蓄積・解析</span>
+								することで、既存業務のデジタル化とひとりひとりへの適切なサービス提供をサポートします。
+								リハビリテーション医療の現場には、活用されないデータが山積しています。
+								わざわざ時間をとって計測しなくても、データの蓄積や解析が自動化されたら、
+								どんなに役立つだろうと思ったことはありませんか？
+								私達は、そんな現場のニーズに応え、近未来のあるべき姿を追求します。</p>
 							<div class="btnBox mt30"><a href="#">View more</a></div>
 						</div>
 					</div>
@@ -194,7 +200,7 @@
 		</div>
 
 		<!--    コンサル    -->
-		<div class="content" id="contact">
+		<div class="content hide" id="contact">
 			<div class="img_box bk_con"><p class="img_title">コンサルティング</p></div>
 			<div class="box_main_inner">
 				<div class="flex_st">

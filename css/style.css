@@ -423,6 +423,10 @@ ul.list li {
   line-height: 1.3em;
 }
 
+.hide {
+  display: none;
+}
+
 /* リハビリ */
 .bk_reha {
   background-image: url(../img/bk_fg001.jpg);

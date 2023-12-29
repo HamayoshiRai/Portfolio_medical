@@ -49,3 +49,37 @@ $(document).ready(function() {
   // 初期時点でのアクティブなスライドを設定
   changeSlide(currentIndex);
 });
+
+// タブ切り替え
+document.addEventListener("DOMContentLoaded", function () {
+  // タブメニューの要素を取得
+  var tabMenu = document.getElementById("tabMenu");
+
+  // クリックイベントを設定
+  tabMenu.addEventListener("click", function (e) {
+      // クリックされた要素がリンクである場合のみ処理を実行
+      if (e.target.tagName === "A") {
+          e.preventDefault();
+
+          // クリックされたタブに対応するコンテンツを表示
+          var targetId = e.target.getAttribute("data-id");
+
+          // すべてのコンテンツを非表示にする
+          var contents = document.querySelectorAll(".content");
+          contents.forEach(function (content) {
+              content.classList.remove("active");
+          });
+
+          // クリックされたタブに対応するコンテンツを表示
+          var targetContent = document.getElementById(targetId);
+          targetContent.classList.add("active");
+
+          // タブのアクティブ状態を切り替える
+          var tabs = tabMenu.querySelectorAll("a");
+          tabs.forEach(function (tab) {
+              tab.classList.remove("active");
+          });
+          e.target.classList.add("active");
+      }
+  });
+});
