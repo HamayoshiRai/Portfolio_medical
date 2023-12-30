@@ -487,7 +487,7 @@ ul.list li {
 
 .partnerBnr p {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -503,7 +503,8 @@ ul.list li {
 
 .contactBnr p {
   position: absolute;
-  right: 20%;
+  top: 40%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
@@ -525,4 +526,95 @@ ul.list li {
   -webkit-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
   vertical-align: bottom;
+}
+
+.berBox a {
+  display: block;
+}
+
+.contactBnr {
+  position: relative;
+  margin-left: 12px;
+}
+
+/* footer */
+footer {
+  background: #f4f4f4;
+}
+
+.topFooter {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 0 auto;
+  padding-top: 25px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #143d70;
+  margin-bottom: 10px;
+  align-items: baseline;
+}
+
+.topFooter img {
+  width: 100%;
+  max-width: 125px;
+}
+
+.bottomFooter {
+  padding: 0 25px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  text-align: right;
+}
+
+.bottomFooter nav {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+footer nav ul li {
+  margin-left: 30px;
+  display: inline;
+  white-space: nowrap;
+  line-height: 2em;
+}
+
+.bottomFooter nav {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.footer_line_box {
+  background-color: #e6982a;
+}
+
+.footer_line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1260px;
+  margin: auto;
+  padding: 0 30px 0px;
+}
+
+.footer_line p {
+  color: #fff;
+}
+
+.footer_line ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer_line ul li {
+  margin-left: 20px;
+}
+
+.footer_line ul li a {
+  color: #fff;
+  font-size: 14px;
 }
