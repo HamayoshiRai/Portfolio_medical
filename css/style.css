@@ -222,6 +222,16 @@ h2 {
 }
 
 /* 最新情報 */
+.scroll_box {
+  opacity: 0.1;
+  transition: all 1.5s;
+}
+
+/* JSで追加されるクラス */
+.blokIn {
+  opacity: 1;
+}
+
 .news_contents a {
   display: block;
   border-bottom: solid 1px;

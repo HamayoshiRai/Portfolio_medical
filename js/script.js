@@ -83,3 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+
+// スクロール時のふわっと表示
+$(function() {
+    $(window).scroll(function() {
+      $(".scroll_box").Each(function() {
+        var scroll = $(window).scrollTop();
+        var blokPosition = $(this).height();
+        if (scroll > blockPosition - windowHeight) {
+          $(this).addClass("blokIn");
+        }
+      })
+    })
+})
