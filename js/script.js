@@ -88,12 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // スクロール時のふわっと表示
 $(function() {
     $(window).scroll(function() {
-      $(".scroll_box").Each(function() {
+      $(".scroll-block").Each(function() {
         var scroll = $(window).scrollTop();
-        var blokPosition = $(this).height();
+        var blokPosition = $(this).offset().top;
+        var windowHeight = $(window).height();
         if (scroll > blockPosition - windowHeight) {
-          $(this).addClass("blokIn");
+          $(this).addClass("blockIn");
         }
-      })
-    })
-})
+      });
+    });
+});
