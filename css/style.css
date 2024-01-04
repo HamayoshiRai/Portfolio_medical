@@ -223,8 +223,9 @@ h2 {
 
 /* 最新情報 */
 .scroll-block {
-  opacity: 0.1;
-  transition: all 1.5s;
+  opacity: 0;
+  transition: .8s;
+  transform: translateY(50px);
 }
 
 /* JSで追加されるクラス */
@@ -439,7 +440,7 @@ ul.list li {
 
 /* リハビリ */
 .bk_reha {
-  background-image: url(../img/bk_fg001.jpg);
+  background-image: url(../img/bk_rehab.jpg);
   background-position: center -15vw;
   background-size: cover;
 }
@@ -452,7 +453,7 @@ ul.list li {
 
 /* コンサル */
 .bk_con {
-  background-image: url(../img/bk_fg001.jpg);
+  background-image: url(../img/bk_con.jpg);
   background-position: center;
   background-size: cover;
 }

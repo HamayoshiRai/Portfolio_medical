@@ -86,15 +86,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // スクロール時のふわっと表示
-$(function() {
-    $(window).scroll(function() {
-      $(".scroll-block").Each(function() {
-        var scroll = $(window).scrollTop();
-        var blokPosition = $(this).offset().top;
-        var windowHeight = $(window).height();
-        if (scroll > blockPosition - windowHeight) {
-          $(this).addClass("blockIn");
-        }
-      });
-    });
+$(window).on("scroll", function() {
+
+  // すべての .scroll-block を取得
+  const item = $(".scroll-block");
+
+  item.each(function() {
+
+    // .item のオフセットの高さを取得
+    const targetTop = $(this).offset().top;
+
+    // 画面のスクロール量 + 500px > .item のオフセットの高さを取得
+    if ($(window).scrollTop() + 500 > targetTop) {
+
+      // .item にクラス .show を追加
+      $(this).addClass("blockIn");
+    }
+  });
 });
