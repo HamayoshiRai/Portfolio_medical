@@ -36,7 +36,7 @@ li {
 }
 
 a {
-  color: #143d70;
+  color: #000;
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -46,9 +46,13 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #5d5d5d;
+}
+
 .logoBox img {
   width: 100%;
-  max-width: 125px;
+  max-width: 115px;
   height: auto;
 }
 
@@ -61,7 +65,7 @@ nav ul {
 }
 
 .pcHeader_flexBox li {
-  margin: 0px 40px;
+  margin: 0px 15px;
 }
 
 .pcHeader_flexBox .pcHeader_bgNav {
@@ -280,11 +284,15 @@ h2 {
 }
 
 .btnBox a::after {
-  content: url(../img/btn_arrow.jpg);
+  content: url(../img/btn_arrow.png);
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 7px;
   transition: .5s;
+}
+
+.btnBox a:hover {
+  background: #ccc;
 }
 
 /* 事業概要 */
@@ -416,7 +424,6 @@ h3 {
 }
 
 .flex_50 {
-  max-width: 620px;
   width: 100%;
 }
 
@@ -436,6 +443,10 @@ ul.list li {
 
 .hide {
   display: none;
+}
+
+.udFb {
+  margin-left: 20%;
 }
 
 /* リハビリ */
@@ -494,13 +505,13 @@ ul.list li {
 .partnerBnr {
   position: relative;
   margin-right: 12px;
+  overflow: hidden; /*画像拡大時にはみ出た部分を隠す*/
 }
 
 .partnerBnr p {
   position: absolute;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
   line-height: 1em;
@@ -516,7 +527,6 @@ ul.list li {
   position: absolute;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
   line-height: 1em;
@@ -532,11 +542,13 @@ ul.list li {
 
 .berBox img {
   width: 100%;
-  -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
   vertical-align: bottom;
+}
+
+.berBox img:hover {
+  transform: scale(1.2); /* ホバー時に1.2倍に拡大 */
 }
 
 .berBox a {
@@ -546,6 +558,7 @@ ul.list li {
 .contactBnr {
   position: relative;
   margin-left: 12px;
+  overflow: hidden; /*画像拡大時にはみ出た部分を隠す*/
 }
 
 /* footer */
@@ -628,4 +641,141 @@ footer nav ul li {
 .footer_line ul li a {
   color: #fff;
   font-size: 14px;
+}
+
+@media screen and (min-width: 976px){
+
+  .SmartHeaderNav{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 975px){
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* ヘッダー */
+  .pcHeader {
+    display: none;
+  }
+
+  .SmartHeaderNav {
+    display: block;
+    background: #fff;
+    width: 100%;
+    padding: 8px 0;
+    padding-bottom: 49px;
+    position: fixed;
+    z-index: 9990;
+    top: 0;
+  }
+
+  .SmartHeaderNav .logoBox {
+    position: fixed;
+    left: 25px;
+    z-index: 999;
+  }
+
+  .logoBox {
+    margin-left: 0px;
+  }
+  
+  .menu {
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    cursor: pointer;
+    position: fixed;
+    width: 35px;
+    z-index: 99;
+  }
+
+  .menu__line {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: transform .3s;
+    width: 100%;
+  }
+
+  .menu__line--center {
+    top: 9px;
+  }
+
+  .menu__line--bottom {
+    bottom: 0;
+  }
+
+  .gnav {
+    background: #fff;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+    animation: fadeInOut 0.5s ease; /* 初期状態でのフェードイン */
+  }
+
+  /* メニューが表示されているときのスタイル */
+  .gnav.show {
+    display: block;
+  }
+
+  /* メニューが非表示になるときのフェードアウトアニメーション */
+  .gnav:not(.show) {
+    animation: fadeInOut 0.5s ease reverse; /* フェードアウト */
+  }
+
+  .gnav__wrap {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+  }
+
+  ul.gnav__menu {
+    width: 80%;
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .gnav__menu__item {
+    margin: 20px 0;
+  }
+
+  .gnav__menu__item a {
+    color: #e6982a;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: .5s;
+    letter-spacing: .2em;
+  }
+
+  .gnav__menu__item a:hover {
+    color: #fff;
+    text-shadow: #e6982a 1px 1px 13px, #e6982a -1px 1px 13px, #e6982a 1px -1px 13px, #e6982a -1px -1px 13px;
+  }
+
+  .SmartHeaderNav .spHeader_bgNav {
+    background: #006da4;
+    padding: 15px 30px;
+    color: #fff;
+    border: solid 1px;
+  }
+
 }

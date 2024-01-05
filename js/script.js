@@ -104,3 +104,23 @@ $(window).on("scroll", function() {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // メニューボタンとメニューの要素を取得
+  const menuToggle = document.getElementById('menuToggle');
+  const gnav = document.querySelector('.gnav');
+
+  // ボタンがクリックされたときの処理
+  menuToggle.addEventListener('click', function () {
+    // メニューの表示・非表示を切り替え
+    gnav.classList.toggle('show');
+
+    // メニューが表示されているかどうかでアニメーションクラスを切り替え
+    if (gnav.classList.contains('show')) {
+      gnav.classList.add('fadeIn');
+    } else {
+      gnav.classList.remove('fadeIn');
+    }
+  });
+});
