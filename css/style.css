@@ -74,13 +74,14 @@ nav ul {
   color: #fff;
 }
 
+/* main */
 .openingText {
   visibility: visible;
   opacity: 1;
   transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.005s;
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -194,7 +195,6 @@ h2 {
   position: relative;
   padding: 0 30px 0;
   max-width: 1200px;
-  margin: 100px auto 0;
   letter-spacing: 0;
 }
 
@@ -212,17 +212,15 @@ h2 {
   background-color: #e8edf3;
 }
 
-.box_main_inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 30px;
-}
-
 .news_contents {
   padding: 20px 50px;
   padding-bottom: 40px;
   background: #fff;
   margin-bottom: 30px;
+}
+
+#topPhilosophy {
+  margin-top: 100px;
 }
 
 /* 最新情報 */
@@ -307,6 +305,7 @@ h2 {
   position: relative;
   padding: 0;
   flex-wrap: wrap;
+  white-space: pre-wrap;
 }
 
 .tabMenu li {
@@ -361,6 +360,11 @@ h2 {
 
 .box_sp30_l {
   padding: 30px;
+  margin: 0 20%;
+}
+
+.box_sp30_r {
+  padding: 0 0 0 20%;
 }
 
 .logo_box {
@@ -482,10 +486,12 @@ ul.list li {
   margin: 0 auto 30px;
   font-size: 30px;
   max-width: 1200px;
+  margin-left: 30px;
 }
 
 .philosophyWrap p {
   color: #fff;
+  margin-left: 30px;
 }
 
 /* ボトム */
@@ -662,6 +668,10 @@ footer nav ul li {
     }
   }
 
+  .fadeIn {
+    animation: fadeIn 0.5s ease;
+  }
+
   /* ヘッダー */
   .pcHeader {
     display: none;
@@ -716,7 +726,27 @@ footer nav ul li {
     bottom: 0;
   }
 
+  /* ハンバーガーメニュークリック後のスタイル */
+  .gnav.active {
+    transform: translateX(0);
+  }
+
+  .menu_lines.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+
+  .menu_lines.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu_lines.active span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+
   .gnav {
+    opacity: 0;
     background: #fff;
     display: none;
     height: 100%;
@@ -729,6 +759,7 @@ footer nav ul li {
   /* メニューが表示されているときのスタイル */
   .gnav.show {
     display: block;
+    opacity: 1
   }
 
   /* メニューが非表示になるときのフェードアウトアニメーション */
@@ -772,10 +803,81 @@ footer nav ul li {
   }
 
   .SmartHeaderNav .spHeader_bgNav {
-    background: #006da4;
+    background: #ffc574;
     padding: 15px 30px;
     color: #fff;
     border: solid 1px;
+  }
+
+  /* ハンバーガーメニューのアイコン初期状態 */
+  .menu__line--top,
+  .menu__line--center,
+  .menu__line--bottom {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* メニューが開かれたときのアイコンのスタイル */
+  .menu.open .menu__line--top {
+    transform: translateY(9px) rotate(-45deg);
+  }
+
+  .menu.open .menu__line--center {
+    opacity: 0;
+  }
+
+  .menu.open .menu__line--bottom {
+    transform: translateY(-9px) rotate(45deg);
+  }
+
+  /* mein */
+  .openingText {
+    top: 20%;
+  }
+
+  .openingText h1 {
+    font-size: 30px; 
+  }
+
+  .openingText p {
+    display: none;
+  }
+
+  .openingText img {
+    display: none;
+  }
+
+  .slide-dots {
+    top: 28%;
+    right: auto;
+  }
+
+  .slide-dots li {
+    font-size: 5px;
+  }
+
+  /* 事業概要 */
+  .tabMenu li {
+    width: 100%;
+  }
+
+  .flex_st {
+    display: block;
+  }
+
+  .txt_R {
+    width: 100%;
+  }
+
+  .flex_50_R {
+    width: 100%;
+  }
+
+  .flex_50_box {
+    width: 100%;
+  }
+
+  .box_sp30_r {
+    padding: 0 20%;
   }
 
 }

@@ -106,12 +106,22 @@ $(window).on("scroll", function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  // メニューボタンとメニューの要素を取得
-  const menuToggle = document.getElementById('menuToggle');
-  const gnav = document.querySelector('.gnav');
+const ham = document.querySelector('#menuToggle'); //js-hamburgerの要素を取得し、変数hamに格納
+const h = document.querySelector('.menu_lines');
+const nav = document.querySelector('#js_nav'); //js-navの要素を取得し、変数navに格納
 
-  // ボタンがクリックされたときの処理
+ham.addEventListener('click', function () { //ハンバーガーメニューをクリックしたら
+  ham.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
+  h.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
+  nav.classList.toggle('active'); // ナビゲーションメニューにactiveクラスを付け外し
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const gnav = document.getElementById('js_nav');
+  const menuLines = document.querySelectorAll('.menu__line');
+
   menuToggle.addEventListener('click', function () {
     // メニューの表示・非表示を切り替え
     gnav.classList.toggle('show');
@@ -122,5 +132,10 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       gnav.classList.remove('fadeIn');
     }
+
+    // ハンバーガーアイコンのクラスをトグルして切り替え
+    menuLines.forEach(function(line, index) {
+      line.classList.toggle('menu__line--close-' + (index + 1));
+    });
   });
 });
