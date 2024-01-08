@@ -83,7 +83,6 @@ nav ul {
   z-index: 2;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 95%;
   text-align: center;
@@ -144,9 +143,7 @@ nav ul {
 .slide-dots {
   text-align: center;
   display: flex;
-  position: absolute;
-  right: 40px;
-  bottom: 62px;
+  float: right;
   z-index: 999;
 }
 
@@ -159,7 +156,7 @@ nav ul {
   cursor: pointer;
   width: 90px;
   margin: 0 15px;
-  background: rgba(255, 255, 255, 0.7);
+  background: #e1e1e1;
   font-size: 14px;
   height: 7px;
 }
@@ -360,11 +357,10 @@ h2 {
 
 .box_sp30_l {
   padding: 30px;
-  margin: 0 20%;
 }
 
 .box_sp30_r {
-  padding: 0 0 0 20%;
+  padding: 0 0 0 30;
 }
 
 .logo_box {
@@ -846,11 +842,6 @@ footer nav ul li {
     display: none;
   }
 
-  .slide-dots {
-    top: 28%;
-    right: auto;
-  }
-
   .slide-dots li {
     font-size: 5px;
   }
@@ -876,8 +867,18 @@ footer nav ul li {
     width: 100%;
   }
 
-  .box_sp30_r {
-    padding: 0 20%;
+  .medical_img {
+    display: flex;
+    justify-content: center;
   }
 
+  .data-ma + .mt20 {
+    text-align: center;
+  }
+
+  .udFb {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
 }
