@@ -105,37 +105,17 @@ $(window).on("scroll", function() {
   });
 });
 
+// menu-btnをクリックしたらgnavにis-activeを付与
+$(function(){
+  $('.menu-btn').on('click', function(){
+    $('.gnav').toggleClass('is-active');
+  });
+}());
 
-const ham = document.querySelector('#menuToggle'); //js-hamburgerの要素を取得し、変数hamに格納
-const h = document.querySelector('.menu_lines');
-const nav = document.querySelector('#js_nav'); //js-navの要素を取得し、変数navに格納
-
-ham.addEventListener('click', function () { //ハンバーガーメニューをクリックしたら
-  ham.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
-  h.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
-  nav.classList.toggle('active'); // ナビゲーションメニューにactiveクラスを付け外し
-
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.getElementById('menuToggle');
-  const gnav = document.getElementById('js_nav');
-  const menuLines = document.querySelectorAll('.menu__line');
-
-  menuToggle.addEventListener('click', function () {
-    // メニューの表示・非表示を切り替え
-    gnav.classList.toggle('show');
-
-    // メニューが表示されているかどうかでアニメーションクラスを切り替え
-    if (gnav.classList.contains('show')) {
-      gnav.classList.add('fadeIn');
-    } else {
-      gnav.classList.remove('fadeIn');
-    }
-
-    // ハンバーガーアイコンのクラスをトグルして切り替え
-    menuLines.forEach(function(line, index) {
-      line.classList.toggle('menu__line--close-' + (index + 1));
-    });
+// menu-btnをクリックしたらそれににactiveを付与
+$(function(){
+  $('.menu-btn').on('click', function() {
+    $(this).toggleClass('active');
+    return false;
   });
 });

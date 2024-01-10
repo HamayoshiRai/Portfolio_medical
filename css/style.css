@@ -657,19 +657,6 @@ footer nav ul li {
 
 @media screen and (max-width: 975px){
 
-  @keyframes fadeInOut {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .fadeIn {
-    animation: fadeIn 0.5s ease;
-  }
-
   /* ヘッダー */
   .pcHeader {
     display: none;
@@ -696,17 +683,6 @@ footer nav ul li {
     margin-left: 0px;
   }
   
-  .menu {
-    height: 20px;
-    position: absolute;
-    right: 20px;
-    top: 21px;
-    cursor: pointer;
-    position: fixed;
-    width: 35px;
-    z-index: 99;
-  }
-
   .menu__line {
     background: #333;
     display: block;
@@ -714,6 +690,10 @@ footer nav ul li {
     position: absolute;
     transition: transform .3s;
     width: 100%;
+  }
+
+  .menu__line--top {
+    top: 0px;
   }
 
   .menu__line--center {
@@ -724,47 +704,6 @@ footer nav ul li {
     bottom: 0;
   }
 
-  /* ハンバーガーメニュークリック後のスタイル */
-  .gnav.active {
-    transform: translateX(0);
-  }
-
-  .menu_lines.active span:nth-child(1) {
-    top: 10px;
-    transform: rotate(45deg);
-  }
-
-  .menu_lines.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu_lines.active span:nth-child(3) {
-    top: 9px;
-    transform: rotate(-45deg);
-  }
-
-  .gnav {
-    opacity: 0;
-    background: #fff;
-    display: none;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    z-index: 98;
-    animation: fadeInOut 0.5s ease; /* 初期状態でのフェードイン */
-  }
-
-  /* メニューが表示されているときのスタイル */
-  .gnav.show {
-    display: block;
-    opacity: 1
-  }
-
-  /* メニューが非表示になるときのフェードアウトアニメーション */
-  .gnav:not(.show) {
-    animation: fadeInOut 0.5s ease reverse; /* フェードアウト */
-  }
-
   .gnav__wrap {
     align-items: center;
     display: flex;
@@ -773,12 +712,6 @@ footer nav ul li {
     position: absolute;
     width: 100%;
     overflow: auto;
-  }
-
-  ul.gnav__menu {
-    width: 80%;
-    text-align: center;
-    max-width: 500px;
   }
 
   .gnav__menu__item {
@@ -807,24 +740,67 @@ footer nav ul li {
     border: solid 1px;
   }
 
-  /* ハンバーガーメニューのアイコン初期状態 */
-  .menu__line--top,
-  .menu__line--center,
-  .menu__line--bottom {
-    transition: transform 0.3s ease-in-out;
+  .menu-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    top: 21px;
+    position: fixed;
+    height: 20px;
+    width: 35px;
+    z-index: 99;
   }
 
-  /* メニューが開かれたときのアイコンのスタイル */
-  .menu.open .menu__line--top {
-    transform: translateY(9px) rotate(-45deg);
+  /*----------------------------
+  * メニュー本体
+  *----------------------------*/
+  .gnav{
+    background: #fff;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+    text-align: center;
   }
 
-  .menu.open .menu__line--center {
+  .gnav__menu {
+    width: 80%;
+    text-align: center;
+    max-width: 500px;
+  }
+
+  /*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+
+  /* アニメーション前のメニューの状態 */
+  .menu{
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
+  /* アニメーション後のメニューの状態 */
+  .menu.is-active{
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  /*=============================
+  ハンバーガーボタン
+  =============================*/
+  .menu-btn.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(5px) rotate(-45deg);
+    color: #ff0000;
+  }
+  .menu-btn.active span:nth-of-type(2) {
     opacity: 0;
   }
-
-  .menu.open .menu__line--bottom {
-    transform: translateY(-9px) rotate(45deg);
+  .menu-btn.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-13px) rotate(45deg);
+    color: #ff0000;
   }
 
   /* mein */
@@ -844,6 +820,10 @@ footer nav ul li {
   .openingText_logoBox img {
     display: none;
     width: 70%;
+  }
+
+  .slide {
+    margin-top: 60px;
   }
 
   /* .slide img {

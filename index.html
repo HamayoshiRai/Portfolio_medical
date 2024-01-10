@@ -7,6 +7,7 @@
   <title>PORTFOLIO_Medical</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
 </head>
 <body>
@@ -33,24 +34,22 @@
 			<div class="logoBox">
 				<a href="#"><img src="./img/F-cLsky_logo.png" alt=""></a>
 			</div>
-			<a class="menu" id="menuToggle">
-				<span class="menu_lines">
+			<a class="menu-btn" id="menuToggle">
 					<span class="menu__line menu__line--top"></span>
 					<span class="menu__line menu__line--center"></span>
 					<span class="menu__line menu__line--bottom"></span>
-				</span>
 			</a>
-			<nav class="gnav" id="js_nav">
+			<nav class="gnav menu" id="js_nav">
 				<div class="gnav__wrap">
-					<ul class="gnav__menu">
-						<li class="gnav__menu__item"><a href="#">DX推進</a></li>
-						<li class="gnav__menu__item"><a href="#">FG-001</a></li>
-						<li class="gnav__menu__item"><a href="#">事業概要</a></li>
-						<li class="gnav__menu__item"><a href="#">新着情報</a></li>
-						<li class="gnav__menu__item"><a href="#">経営理念</a></li>
-						<li class="gnav__menu__item"><a href="#">会社情報</a></li>
-						<li class="gnav__menu__item"><a href="#" class="spHeader_bgNav">お問い合わせ</a></li>
-					</ul>
+					<div class="gnav__menu">
+						<div class="gnav__menu__item"><a href="#">DX推進</a></div>
+						<div class="gnav__menu__item"><a href="#">FG-001</a></div>
+						<div class="gnav__menu__item"><a href="#">事業概要</a></div>
+						<div class="gnav__menu__item"><a href="#">新着情報</a></div>
+						<div class="gnav__menu__item"><a href="#">経営理念</a></div>
+						<div class="gnav__menu__item"><a href="#">会社情報</a></div>
+						<div class="gnav__menu__item"><a href="#" class="spHeader_bgNav">お問い合わせ</a></div>
+					</div>
 				</div>
 			</nav>
 		</div>
@@ -340,6 +339,10 @@
 		</div>
 	</footer>
   <!-- jQuery CDNを追加 -->
+	<script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <!-- Slick Carousel CDNを追加 -->
   <script src="./js/script.js"></script>
