@@ -131,13 +131,13 @@ nav ul {
   left: 0;
   width: 1920px;
   height: 900px;
-  opacity: 0; /* 最初はすべての画像を非表示に */
   z-index: 10;
+  transition-property: opacity; 
+  transition-duration: 1.5s;
 }
 
 .slide_active {
   opacity: 1; /* アクティブなスライドのみ表示 */
-  transition: opacity 1.5s ease; /* フェードのトランジションを設定 */
 }
 
 /* スライドショーボタン */
