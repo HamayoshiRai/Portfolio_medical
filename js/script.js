@@ -99,7 +99,7 @@ $(window).on("scroll", function() {
     // 画面のスクロール量 + 500px > .item のオフセットの高さを取得
     if ($(window).scrollTop() + 500 > targetTop) {
 
-      // .item にクラス .show を追加
+      // クラス .blockIn を追加
       $(this).addClass("blockIn");
     }
   });

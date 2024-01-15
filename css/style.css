@@ -126,17 +126,23 @@ nav ul {
   position: relative;
   overflow: hidden;
   height: 90vh;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .slide img {
-  position: absolute;
-  left: 0;
   width: 1920px;
   height: 900px;
   z-index: 10;
   transition-property: opacity; 
   transition-duration: 1.5s;
+  display: block;
+  margin: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .slide_active {
@@ -219,6 +225,8 @@ h2 {
   padding: 0 30px 0;
   max-width: 1200px;
   letter-spacing: 0;
+  margin-bottom: 0;
+  top: 8px;
 }
 
 .ttl_ja {
@@ -251,17 +259,19 @@ h2 {
   opacity: 0;
   transition: .8s;
   transform: translateY(50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
 }
 
 /* JSで追加されるクラス */
 .blockIn {
   opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 
 .news_contents a {
   display: block;
   border-bottom: solid 1px;
-  padding: 20px 0px;
   position: relative;
   transition: .4s;
 }
@@ -280,6 +290,14 @@ h2 {
   color: #333;
   padding-top: 20px;
   display: block;
+  margin: 0;
+}
+
+.news_contents dd::after {
+  content: url(../img/btn_news.png);
+  position: absolute;
+  bottom: 17px;
+  right: 10px;
 }
 
 .news_contents a:hover {
@@ -899,6 +917,8 @@ nav ul li a:hover {
   .title_box h2 {
     font-size: 37px;
   }
+
+  /* 最新情報 */
 
   /* 事業概要 */
   .tabMenu li {
