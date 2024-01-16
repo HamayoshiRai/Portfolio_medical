@@ -125,7 +125,7 @@ nav ul {
 .slide{
   position: relative;
   overflow: hidden;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -140,7 +140,7 @@ nav ul {
   margin: auto;
 
   position: absolute;
-  top: 50%;
+  top: 57.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -150,14 +150,6 @@ nav ul {
 }
 
 /* スライドショーボタン */
-.slide-dots {
-  text-align: center;
-  display: flex;
-  position: relative;
-  bottom: 5vw;
-  float: right;
-  z-index: 999;
-}
 
 .slide-dots .active {
   background: #5d5d5d;
@@ -192,6 +184,28 @@ button {
 }
 
 /* スクロール部分 */
+@keyframes sdl {
+  0% {
+    transform: translateY(-45%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(20%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 .scroll {
   display: inline-block;
   position: absolute;
@@ -199,16 +213,27 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: 9999999;
+  z-index: 999;
   padding: 10px 10px 110px;
   overflow: hidden;
   color: #fff;
   font-size: 14px;
-  font-family: 'Josefin Sans', sans-serif;
   line-height: 1;
   letter-spacing: .2em;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.scroll::after {
+  animation: sdl 1.5s cubic-bezier(0.5, 0, 0, 1) infinite;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: #fff;
 }
 
 /* section部分 */
@@ -222,7 +247,7 @@ h2 {
   font-size: 50px;
   text-align: left;
   position: relative;
-  padding: 0 30px 0;
+  padding: 0 130px 0;
   max-width: 1200px;
   letter-spacing: 0;
   margin-bottom: 0;
@@ -291,13 +316,6 @@ h2 {
   padding-top: 20px;
   display: block;
   margin: 0;
-}
-
-.news_contents dd::after {
-  content: url(../img/btn_news.png);
-  position: absolute;
-  bottom: 17px;
-  right: 10px;
 }
 
 .news_contents a:hover {
@@ -386,21 +404,6 @@ h2 {
   color: #fff;
 }
 
-.tabMenu li a.active:after {
-  position: absolute;
-  bottom: -18px;
-  background-image: url(../img/arrow_tab.png);
-  content: '';
-  display: inline-block;
-  width: 100%;
-  height: 30px;
-  background-size: contain;
-  left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
 .tabMenu li a:not(.active) {
   transition: 0.4s;
 }
@@ -439,7 +442,7 @@ h2 {
 }
 
 .box_sp30_r {
-  padding: 0 0 0 30;
+  margin: 0 13%;
 }
 
 .logo_box {
@@ -546,6 +549,10 @@ ul.list li {
   background-image: url(../img/bk_con.jpg);
   background-position: center;
   background-size: cover;
+}
+
+:root .has-vivid-red-color {
+  color: #f83c00;
 }
 
 /* 経営理念 */
@@ -736,6 +743,37 @@ nav ul li a:hover {
     display: none;
   }
 
+  .slide-dots {
+    text-align: center;
+    display: flex;
+    position: relative;
+    bottom: 5vw;
+    float: right;
+    z-index: 999;
+  }
+
+  .tabMenu li a.active:after {
+    position: absolute;
+    bottom: -18px;
+    background-image: url(../img/arrow_tab.png);
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    background-size: contain;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+
+  .news_contents dd::after {
+    content: url(../img/btn_news.png);
+    position: absolute;
+    bottom: 17px;
+    right: 10px;
+  }
+
 }
 
 @media screen and (max-width: 975px){
@@ -876,18 +914,21 @@ nav ul li a:hover {
   /*=============================
   ハンバーガーボタン
   =============================*/
-  .menu-btn.active span:nth-of-type(1) {
+
+  .menu__line--top.active {
     -webkit-transform: translateY(20px) rotate(-45deg);
     transform: translateY(5px) rotate(-45deg);
-    color: #ff0000;
+    background-color: #f83c00;
+    transition: .3s
   }
-  .menu-btn.active span:nth-of-type(2) {
+  .menu__line--center.active {
     opacity: 0;
   }
-  .menu-btn.active span:nth-of-type(3) {
+  .menu__line--bottom.active {
     -webkit-transform: translateY(-20px) rotate(45deg);
     transform: translateY(-13px) rotate(45deg);
-    color: #ff0000;
+    background-color: #f83c00;
+    transition: .3s
   }
 
   /* mein */
@@ -906,16 +947,26 @@ nav ul li a:hover {
   }
 
   .slide {
-    margin-top: 60px;
+    margin-top: -17px;
   }
 
   .slide-dots {
     bottom: 0;
   }
 
+  /* meinBtn */
+  .slide-dots {
+    display: none;
+  }
+
+  .slide-dots li {
+    display: none;
+  }
+
   /* sectionタイトル */
   .title_box h2 {
     font-size: 37px;
+    padding: 0 30px 0;
   }
 
   /* 最新情報 */
@@ -923,6 +974,10 @@ nav ul li a:hover {
   /* 事業概要 */
   .tabMenu li {
     width: 100%;
+  }
+
+  .tabMenu li a {
+    margin-bottom: 7px;
   }
 
   .flex_st {
@@ -987,7 +1042,7 @@ nav ul li a:hover {
   .footer_line {
     display: block;
     text-align: center;
-    padding: 0 30px 1px;
+    padding: 0 30px 10px;
   }
 
   .footer_line ul {
@@ -999,19 +1054,22 @@ nav ul li a:hover {
   }
 
   .bottomFooter {
-    text-align: left;
+    text-align: center;
+    padding: 0;
+  }
+
+  .bottomFooter ul {
+    padding-left: 0;
+    padding-right: 15px;
+    margin: 0 auto;
   }
 
   footer nav ul li a {
-    font-size: 2.7vw;
-}
+    font-size: 15px;
+  }
 
   .topFooter {
     display: block;
-  }
-
-  .bottomFooter {
-    padding: 0;
   }
 
   .residence p {

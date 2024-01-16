@@ -115,7 +115,7 @@ $(function(){
 // menu-btnをクリックしたらそれににactiveを付与
 $(function(){
   $('.menu-btn').on('click', function() {
-    $(this).toggleClass('active');
+    $('.menu__line--top, .menu__line--center, .menu__line--bottom').toggleClass('active');
     return false;
   });
 });
