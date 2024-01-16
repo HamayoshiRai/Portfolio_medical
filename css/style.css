@@ -658,19 +658,18 @@ footer {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
-  padding: 0 25px;
+  padding: 0;
   margin: 0 auto;
-  padding-top: 25px;
   align-items: center;
-  padding-bottom: 10px;
   border-bottom: solid 1px #ffaf0f;
-  margin-bottom: 10px;
   align-items: baseline;
 }
 
 .topFooter img {
   width: 100%;
   max-width: 125px;
+  position: relative;
+  top: 20px;
 }
 
 .bottomFooter {
