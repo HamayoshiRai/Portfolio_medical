@@ -6,8 +6,9 @@ $(document).ready(function() {
   // ドットボタンのクリックイベント
   $('.slide-dots li').click(function() {
     var index = $(this).find('button').data('index');
-    changeSlide(index);
-    resetInterval();
+    // changeSlide(index);
+    currentIndex = index;
+    resetInterval(index);
   });
 
   // スライドを変更する関数
@@ -38,7 +39,8 @@ $(document).ready(function() {
   }, 5000);
 
   // clearintervalを使ってsetintervalをリセット
-  function resetInterval() {
+  function resetInterval(index) {
+    console.info("resetInterval-start")
     clearInterval(intervalId);
     intervalId = setInterval(function() {
       currentIndex = (currentIndex + 1) % slideCount;
@@ -53,7 +55,7 @@ $(document).ready(function() {
 // タブ切り替え
 document.addEventListener("DOMContentLoaded", function () {
   // タブメニューの要素を取得
-  var tabMenu = document.getElementById("tabMenu");
+  let tabMenu = document.getElementById("tabMenu");
 
   // クリックイベントを設定
   tabMenu.addEventListener("click", function (e) {
