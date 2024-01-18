@@ -1,15 +1,16 @@
 $(document).ready(function() {
   var currentIndex = 0;
   var slideCount = $('.slide img').length;
-  var intervalId;
+  var intervalId = null;
 
-  // ドットボタンのクリックイベント
+  // ボタンのクリックイベント
   $('.slide-dots li').click(function() {
     var index = $(this).find('button').data('index');
-    // changeSlide(index);
+    changeSlide(index);
     currentIndex = index;
     resetInterval(index);
   });
+
 
   // スライドを変更する関数
   function changeSlide(index) {
@@ -32,25 +33,32 @@ $(document).ready(function() {
     currentIndex = index;
   }
 
-  // スライドショーの自動再生
-  setInterval(function() {
+  function resetInterval(index) {
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
+    setTimeout(function() {
+      intervalId = setInterval(function() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        changeSlide(currentIndex);
+      }, 5000);
+    }, 500);
+  }
+  
+  // 自動でスライドを変更する関数
+  function autoChangeSlide() {
     currentIndex = (currentIndex + 1) % slideCount;
     changeSlide(currentIndex);
-  }, 5000);
-
-  // clearintervalを使ってsetintervalをリセット
-  function resetInterval(index) {
-    console.info("resetInterval-start")
-    clearInterval(intervalId);
-    intervalId = setInterval(function() {
-      currentIndex = (currentIndex + 1) % slideCount;
-      changeSlide(currentIndex);
-    }, 5000);
   }
 
   // 初期時点でのアクティブなスライドを設定
   changeSlide(currentIndex);
+
+  // 一定時間ごとに自動でスライドを変更
+  intervalId = setInterval(autoChangeSlide, 5000);
 });
+
+
 
 // タブ切り替え
 document.addEventListener("DOMContentLoaded", function () {

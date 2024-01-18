@@ -24,13 +24,6 @@ li {
   padding: 0;
 }
 
-.pcHeader_flexBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-}
-
 .logoBox {
   margin-left: 30px;
 }
@@ -70,7 +63,7 @@ nav ul {
 
 .pcHeader_flexBox .pcHeader_bgNav {
   background: #faab3d;
-  padding: 26px 30px;
+  padding: 25px 30px;
   color: #fff;
 }
 
@@ -125,7 +118,7 @@ nav ul {
 .slide{
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 900px;
   display: flex;
   justify-content: center;
 }
@@ -140,7 +133,7 @@ nav ul {
   margin: auto;
 
   position: absolute;
-  top: 57.5%;
+  top: 522px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -952,6 +945,7 @@ nav ul li a:hover {
 
   .slide {
     margin-top: -17px;
+    height: 800px;
   }
 
   .slide-dots {
