@@ -118,7 +118,7 @@ nav ul {
 .slide{
   position: relative;
   overflow: hidden;
-  height: 900px;
+  height: 880px;
   display: flex;
   justify-content: center;
 }
@@ -734,6 +734,7 @@ nav ul li a:hover {
   transition: .7s;
 }
 
+/* 以上 */
 @media screen and (min-width: 976px){
 
   .SmartHeaderNav{
@@ -773,6 +774,7 @@ nav ul li a:hover {
 
 }
 
+/* 以下 */
 @media screen and (max-width: 975px){
 
   /* ヘッダー */
@@ -945,7 +947,7 @@ nav ul li a:hover {
 
   .slide {
     margin-top: -17px;
-    height: 800px;
+    height: 900px;
   }
 
   .slide-dots {
@@ -1083,5 +1085,22 @@ nav ul li a:hover {
 
   .footer nav ul li {
     margin-left: 0;
+  }
+  
+}
+
+/* iPhoneSEとiPhone12Pro */
+@media screen and (max-width:380px){
+  .slide {
+    object-fit: cover;
+    height: 700px;
+  }
+
+}
+
+/* iPhone14 */
+@media screen and (min-width:400px) and ( max-width:480px) {
+  .scroll {
+    bottom: -7%;
   }
 }

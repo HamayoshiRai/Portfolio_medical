@@ -106,8 +106,8 @@ $(window).on("scroll", function() {
     // .item のオフセットの高さを取得
     const targetTop = $(this).offset().top;
 
-    // 画面のスクロール量 + 500px > .item のオフセットの高さを取得
-    if ($(window).scrollTop() + 500 > targetTop) {
+    // 画面のスクロール量 + 800px > .item のオフセットの高さを取得
+    if ($(window).scrollTop() + 800 > targetTop) {
 
       // クラス .blockIn を追加
       $(this).addClass("blockIn");
