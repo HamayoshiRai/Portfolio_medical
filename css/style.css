@@ -63,7 +63,7 @@ nav ul {
 
 .pcHeader_flexBox .pcHeader_bgNav {
   background: #faab3d;
-  padding: 25px 30px;
+  padding: 26px 30px;
   color: #fff;
 }
 
@@ -125,7 +125,7 @@ nav ul {
 
 .slide img {
   width: 1920px;
-  height: 900px;
+  height: 100vh;
   z-index: 10;
   transition-property: opacity; 
   transition-duration: 1.5s;
@@ -133,7 +133,7 @@ nav ul {
   margin: auto;
 
   position: absolute;
-  top: 522px;
+  top: 516px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
