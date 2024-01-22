@@ -9,12 +9,12 @@ li {
 }
 
 .pcHeader {
-  box-shadow: 17px -6px 8px 1px #888;
   position: fixed;
-  z-index: 1001;
+  z-index: 10000;
   top: 0;
   background: #fff;
   width: 100%;
+  height: 73px;
 }
 
 .pcHeader_flexBox {
@@ -74,21 +74,15 @@ nav ul {
 
 /* main */
 .openingText {
-  visibility: visible;
-  opacity: 1;
   transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.005s;
   position: absolute;
-  z-index: 2;
-  top: 27vw;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
   z-index: 999;
+  top: 250px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .openingText h1 {
-  text-align: center;
   line-height: 55px;
   font-size: 50px;
   color: #fff;
@@ -97,7 +91,6 @@ nav ul {
 }
 
 .openingText p {
-  text-align: center;
   line-height: 25px;
   color: #fff;
   letter-spacing: -0.01em;
@@ -118,9 +111,10 @@ nav ul {
 .slide{
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
+  top: 73px;
 }
 
 .slide img {
@@ -133,9 +127,6 @@ nav ul {
   margin: auto;
 
   position: absolute;
-  top: 522px;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .slide_active {
@@ -272,12 +263,17 @@ h2 {
   margin-top: 100px;
 }
 
-/* 最新情報 */
+/* scroll部分 */
 .scroll-block {
   opacity: 0;
   transition: .8s;
   transform: translateY(50px);
   transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+/* 最新情報 */
+.wp-block-lazyblock-top-news {
+  margin-top: 150px;
 }
 
 /* JSで追加されるクラス */
@@ -359,6 +355,7 @@ h2 {
 /* 事業概要 */
 #topService {
   margin-bottom: 0px;
+  margin-top: 80px;
 }
 
 .tabMenu {
@@ -788,10 +785,10 @@ nav ul li a:hover {
 
   .SmartHeaderNav {
     display: block;
-    background: #fff;
+    background: #000;
     width: 100%;
-    padding: 8px 0;
-    padding-bottom: 49px;
+    height: 50px;
+    padding: 5px 0;
     position: fixed;
     z-index: 9990;
     top: 0;
@@ -932,7 +929,7 @@ nav ul li a:hover {
 
   /* mein */
   .openingText {
-    top: 20%;
+    top: 50%;
   }
 
   .openingText h1 {
@@ -947,7 +944,7 @@ nav ul li a:hover {
 
   .slide {
     margin-top: -17px;
-    height: 900px;
+    top: 77px;
   }
 
   .slide-dots {
@@ -964,7 +961,6 @@ nav ul li a:hover {
   }
 
   .slide img {
-    top: 390px;
     width: auto;
   }
 
