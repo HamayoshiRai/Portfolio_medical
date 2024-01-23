@@ -77,7 +77,7 @@ nav ul {
   transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.005s;
   position: absolute;
   z-index: 999;
-  top: 250px;
+  top: 200px;
   margin: 0 auto;
   width: 100%;
 }
@@ -785,7 +785,7 @@ nav ul li a:hover {
 
   .SmartHeaderNav {
     display: block;
-    background: #000;
+    background: #fff;
     width: 100%;
     height: 50px;
     padding: 5px 0;
@@ -929,7 +929,7 @@ nav ul li a:hover {
 
   /* mein */
   .openingText {
-    top: 50%;
+    top: -10%;
   }
 
   .openingText h1 {
@@ -1088,20 +1088,4 @@ nav ul li a:hover {
     margin-left: 0;
   }
   
-}
-
-/* iPhoneSEとiPhone12Pro */
-@media screen and (max-width:380px){
-  .slide {
-    object-fit: cover;
-    height: 700px;
-  }
-
-}
-
-/* iPhone14 */
-@media screen and (min-width:400px) and ( max-width:480px) {
-  .scroll {
-    bottom: -7%;
-  }
 }
