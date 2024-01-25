@@ -252,6 +252,10 @@ h2 {
   background-color: #e8edf3;
 }
 
+.news_inner {
+  padding: 30px;
+}
+
 .news_contents {
   padding: 20px 50px;
   padding-bottom: 40px;
@@ -506,6 +510,7 @@ h3 {
 iframe {
   width: 80%;
   height: 230px;
+  max-width: 500px;
 }
 
 ul.list li {
@@ -536,7 +541,8 @@ ul.list li {
 .box_main_inner {
   max-width: 1200px;
   margin: auto;
-  padding: 50px 30px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 /* コンサル */
@@ -552,7 +558,7 @@ ul.list li {
 
 /* 経営理念 */
 .philosophyWrap {
-  background: rgb(255, 200, 124);
+  background: #e6982a;
   padding-bottom: 45px;
 }
 
@@ -672,7 +678,7 @@ footer {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   text-align: right;
 }
 
@@ -769,6 +775,13 @@ nav ul li a:hover {
     right: 10px;
   }
 
+}
+
+@media screen and (min-width: 1920px){
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* 以下 */
@@ -1063,6 +1076,7 @@ nav ul li a:hover {
   .bottomFooter {
     text-align: center;
     padding: 0;
+    margin-top: 30px;
   }
 
   .bottomFooter ul {
