@@ -981,12 +981,12 @@ nav ul li a:hover {
   /* sectionタイトル */
   .title_box h2 {
     font-size: 35px;
-    padding: 0 25px 0;
+    padding: 0 23px 0;
     top: 6px;
   }
 
   .ttl_ja {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
   }
 
