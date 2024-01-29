@@ -63,13 +63,14 @@ nav ul {
 
 .pcHeader_flexBox .pcHeader_bgNav {
   background: #faab3d;
-  padding: 25px 30px;
+  padding: 30px 30px;
   color: #fff;
 }
 
 .pcHeader_flexBox .pcHeader_bgNav:hover {
   background: #fff;
   color: #fa9200;
+  padding: 26px 30px;
 }
 
 /* main */
@@ -530,7 +531,8 @@ ul.list li {
 }
 
 .udFb {
-  margin-left: 20%;
+  display: flex;
+  justify-content: center;
 }
 
 /* リハビリ */
@@ -1124,6 +1126,11 @@ nav ul li a:hover {
 
   .footer nav ul li {
     margin-left: 0;
+  }
+
+  .bt_line {
+    white-space: nowrap;
+    overflow:scroll;
   }
   
 }
