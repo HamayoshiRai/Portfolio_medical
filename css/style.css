@@ -70,7 +70,7 @@ nav ul {
 .pcHeader_flexBox .pcHeader_bgNav:hover {
   background: #fff;
   color: #fa9200;
-  padding: 26px 30px;
+  padding: 25px 30px;
 }
 
 /* main */
@@ -241,12 +241,12 @@ h2 {
 }
 
 .ttl_ja {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   letter-spacing: .05em;
   color: #000;
   margin-top: 10px;
-  margin-left: 5px;
+  margin-left: 10px;
   vertical-align: 10px;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -982,14 +982,8 @@ nav ul li a:hover {
 
   /* sectionタイトル */
   .title_box h2 {
-    font-size: 35px;
     padding: 0 23px 0;
     top: 6px;
-  }
-
-  .ttl_ja {
-    font-size: 15px;
-    font-weight: bold;
   }
 
   /* 最新情報 */
@@ -1130,7 +1124,65 @@ nav ul li a:hover {
 
   .bt_line {
     white-space: nowrap;
-    overflow:scroll;
   }
   
+}
+
+@media screen and (max-width: 565px){
+
+  h2 {
+    font-size: 8vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+    line-height: 1.2em;
+  }
+
+  footer nav ul li a {
+    font-size: 3vw;
+  }
+
+  footer nav ul li a {
+    font-size: 3vw;
+  }
+
+  .bottomFooter {
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .bottomFooter nav {
+    text-align: center;
+  }
+
+  footer nav ul li {
+    margin-bottom: 25px;
+    width: 33%;
+    margin-right: 15px;
+  }
+
+  .footer_line {
+    display: block;
+    text-align: center;
+    padding: 5px 30px 10px;
+  }
+
+  /* copy */
+  .copy p {
+    font-size: 3vw;
+  }
+
+  /* ポリシー */
+  .footer_line ul li a {
+    color: #fff;
+    font-size: 3vw;
+  }
+
+  .footer_line ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline;
+  }
 }
