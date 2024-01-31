@@ -237,7 +237,7 @@ h2 {
   max-width: 1200px;
   letter-spacing: 0;
   margin-bottom: 0;
-  top: 5px;
+  top: 6px;
 }
 
 .ttl_ja {
@@ -983,7 +983,7 @@ nav ul li a:hover {
   /* sectionタイトル */
   .title_box h2 {
     padding: 0 23px 0;
-    top: 6px;
+    top: 5px;
   }
 
   /* 最新情報 */
